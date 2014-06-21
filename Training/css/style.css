@@ -1,0 +1,979 @@
+/* -- MAIN STYLES ------------------------------------- */
+/*                                                      */
+/*    Links, fonts, inline elements.                    */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('/css/fonts/bebasneue-webfont.eot');
+    src: url('/css/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/bebasneue-webfont.woff') format('woff'),
+         url('/css/fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('/css/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background: #FFF;
+}
+
+h1 {
+    margin: 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading
+{
+    font-family: bebas_neueregular;
+}
+
+pre,
+p {
+    line-height: 24px;
+}
+
+pre
+{
+    margin: 0 0 20px 0;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: #C73318;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* All images should be 100% of container unless otherwise stated */
+
+img.left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+img.right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.pageImage {
+    margin-bottom: 20px;
+}
+
+.breadcrumb{
+    margin-bottom: 0;
+    padding: 0 10px;
+}
+
+/* Tables --------------------------------------------- */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table th
+{
+    background: #ccc;
+}
+
+table td,
+table th {
+    border: 1px solid #ccc;
+    padding: 10px;    
+}
+
+/* Button styles -------------------------------------- */
+
+a.button {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    width: 100px;
+    line-height: 30px;
+    color: #000;
+}
+
+a.button.bookButton {
+    font-size: 12px;
+    line-height: 20px;
+    width: auto;    
+}
+
+/* Misc page styles ----------------------------------- */
+
+p.print{
+    background: url("../img/print.png") top left no-repeat;
+    line-height: 16px;
+    padding-left: 20px;
+}
+
+/* Itinerary ------------------------------------------ */
+
+.itinerary {
+    background: #efefef;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.columnsInner .itinerary li {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+/* -- WRAPPERS ---------------------------------------- */
+/*                                                      */
+/*    Full-width wrappers - backgrounds only.           */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+#headerWrapper {
+    position: relative;
+    z-index: 100;
+    border-top: 10px solid #ccc; 
+}
+
+#galleryWrapper {}
+
+#widgetsWrapper {
+    padding: 20px 0;
+    background: url('/img/textures/light_toast.png');
+}
+
+#pageWrapper {
+    position: relative;
+    z-index: 0;
+    background: #fff url('/img/page-background.jpg') left -1px repeat-x;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 2px solid #eee;
+}
+
+#footerWrapper {
+    padding: 20px 0 0 0;
+    background: #9cd8ec;
+}
+
+#bottomWrapper {
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+}
+
+/* Containers ----------------------------------------- */
+
+.container {
+    margin-bottom: 10px;
+}
+
+#bottomContainer,
+#footerContainer,
+#galleryContainer,
+#widgetsContainer,
+#headerContainer,
+#pageContainer {
+    margin-bottom: 0;
+}
+
+#headerContainer {
+    position: relative;
+    min-height: 114px;    
+}
+
+#footerContainer {
+    padding-bottom: 20px;
+}
+
+/* Columns -------------------------------------------- */
+
+#columnsWrapper {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;    
+    background: transparent;
+}
+
+#columnsWrapper img.large {
+    width: 100%;
+    height: auto;
+}
+
+/* Main body content styling -------------------------- */
+
+.columnsInner ul li {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+/* -- HEADER ------------------------------------------ */
+/*                                                      */
+/*    Navigation, logo, search bar.                     */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+/* Logo ----------------------------------------------- */
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 26px;
+}
+
+/* Navigation ----------------------------------------- */
+
+/* Main */
+
+.navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    float: left;
+    margin-bottom: 0;
+}
+
+.navigation li,
+.navigation li a {
+    display: block;
+    float: left;    
+}
+
+.navigation li {
+
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding-bottom: 9px;
+}
+
+.navigation li a {
+    padding: 16px 10px 10px 10px;    
+    text-decoration: none;
+    font-weight: bold; 
+    color: #333;
+    /* background: #ccc;    
+    text-shadow: 1px 1px 0px #FFF;
+    filter: dropshadow(color=#FFF, offx=1, offy=1); */
+}
+
+.navigation li a:hover {
+    padding-top: 18px;
+}
+
+.navigation li a.current {
+    background: url("../img/current.png") center -5px no-repeat;
+}
+
+/* Meta - Footer */
+
+.metaNavigation {
+    margin: 0;
+}
+
+.metaNavigation li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.metaNavigation li a {
+    color: #fff;   
+}
+
+.metaNavigation li a:hover {
+    text-shadow: 1px 1px 0px #333;
+    filter: dropshadow(color=#333, offx=1, offy=1);      
+}
+
+/* -- SIDENAV ----------------------------------------- */
+/*                                                      */
+/*                                                      */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+ul.level0 {
+    padding-left: 0;
+}
+
+ul.level0 li a,
+ul.level0 li {
+    display: block;
+        
+}
+
+ul.level0 li {
+    list-style-type: none;
+    margin: 0 0 1px 0;
+}
+
+ul.level0 li a.selected,
+ul.level0 li a:hover {
+    background: #dddddd;
+}
+
+ul.level0 li a {
+    background: #eee;
+    padding: 5px; 
+    color: #333;   
+    text-shadow: 1px 1px 0px #ffffff;
+    filter: dropshadow(color=#ffffff, offx=1, offy=1);    
+    text-decoration: none;
+}
+
+/* Meta - Header */
+
+/* -- FOOTER ------------------------------------------ */
+/*                                                      */
+/*                                                      */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+#bottomWrapper .pickLanguage,
+#bottomWrapper .copyright {
+    margin: 0;
+    text-align: right;
+}
+
+#bottomWrapper .pickLanguage a {
+    text-decoration: none;    
+}
+
+/* -- SECTION ITEM ------------------------------------ */
+/*                                                      */
+/*                                                      */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.sectionItem {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.sectionItem:last-child {
+    border-bottom: none;
+}
+
+.sectionItem h2 a {
+    text-decoration: none;
+}
+
+#columnsWrapper .sectionItem img {
+    width: auto;
+    float: left;
+    width: 40%;
+    height: auto;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 0 10px 20px 0;
+}
+
+/* -- Search ------------------------------------------ */
+/*                                                      */
+/*                                                      */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.searchForm {
+    padding: 10px 15px;
+    background: #ccc;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+}
+
+.searchFormColumn {
+    width: 50%;
+    float: left;
+    min-height: 50px;
+}
+
+.searchFormRow
+{
+    overflow: hidden;
+}
+
+.searchForm input,
+.searchForm select
+{
+    padding: 6px 4px;
+    margin-bottom: 10px;
+}
+
+
+.searchPagination {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #C73318;
+    text-decoration: none;
+    margin-right: 1px;
+}
+
+span.searchPagination
+{
+    background: none;
+}
+
+a:active.searchPagination,
+a:visited.searchPagination,
+a:link.searchPagination
+{
+    color: #fff;
+}
+
+/* -- Glossary ---------------------------------------- */
+/*                                                      */
+/*                                                      */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.glossaryItem h2 {
+    padding: 2px 10px 2px 40px;
+    background: #efefef;
+}
+
+/* -- CONTENT ----------------------------------------- */
+/*                                                      */
+/*    Forms                                             */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.formWrapper
+{
+    clear: both;
+    overflow: hidden;
+}
+
+.formRow {
+    background: #eee;
+    padding: 10px 10px 5px 10px;
+    margin-bottom: 10px;
+}
+
+.formRow.plain {
+    background: none;
+    padding: 10px 0 5px 0;
+}
+
+/* -- CONTENT ----------------------------------------- */
+/*                                                      */
+/*    News                                              */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.newsListing h2
+{
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.files a {
+    margin-right: 6px;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 11px;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.comments {
+    
+}
+
+.articleMeta .author {
+    border-bottom: 1px dotted #ccc;
+}
+
+.comment {
+    margin-bottom: 12px;
+    background: #eee;
+    padding: 20px 20px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px; 
+    overflow: hidden;  
+}
+
+.commentMeta {
+    border-bottom: 1px dotted #ccc;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 40px;
+    background: url('/img/message.png') top left no-repeat;
+}
+
+.columnsInner .relatedArticles li {
+    padding: 0 0 0 30px;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+    background: url('/img/newspaper.png') top left no-repeat;
+}
+
+
+/* -- CONTENT ----------------------------------------- */
+/*                                                      */
+/*    Gallery                                           */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+#slides {
+    position: relative;
+}
+
+#slides .slides_container {}
+		
+#slides .pagination {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#slides .slides_container {
+	width: 960px;
+	height: 400px;
+	display: none;    
+}
+
+.headerImage div,
+#slides .slides_container div {
+	width: 960px;
+	height: 400px;
+	display: block;
+	position: relative;
+}
+
+.headerImage .slideContent,
+#slides .slides_container .slideContent {
+    position: absolute;
+    bottom: 10px !important ;
+    right: 10px;
+    width: 350px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.headerImage .slideContent .heading,
+#slides .slides_container .slideContent .heading {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#slides .pagination {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+#slides .pagination li {
+    float: left;
+}
+
+#slides .pagination li a {
+    overflow: hidden;
+    height: 0;
+    width: 32px;
+    display: block;
+    float: left;
+    background: url('/img/rotator.png');
+    padding-top: 32px;
+}
+
+#slides .pagination li.current a {
+    background: url('/img/rotator-current.png');
+}
+
+/* -- CHUNKS ------------------------------------------ */
+/*                                                      */
+/*    Default chunk styling - overriden by widgets and    */
+/*    spots depending on where they are on the page.    */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+.chunk {
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;        
+}
+
+.chunk.fill {
+    padding: 10px;
+}
+
+.chunk .heading {
+    display: block;
+}
+
+.chunk .heading,
+.chunk h2,
+.chunk h3,
+.chunk h4,
+.chunk h5,
+.chunk h6 {
+     font-size: 24px; 
+     line-height: 34px; 
+     margin-bottom: 8px;
+}
+
+.chunk p:last-child {
+    margin-bottom: 10px;
+}
+
+.chunk a {
+    display: block;
+    clear: both;
+    font-weight: bold;
+}
+
+/* Spots ---------------------------------------------- */
+
+.spot {
+    margin: 0 0 20px 0;
+}
+
+.spot img {
+    width: 100%;
+    height: 100%;
+}
+
+.spot.standard {
+    border-bottom: 5px solid #C73318;
+    padding-bottom: 10px;
+}
+
+/* Booking spot */
+
+    .spot.book
+    {
+        background: #FDEF93;
+        padding: 10px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    }
+
+.spot.book h3 {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+.spot.book a.button{
+    width: auto;
+    padding: 5px;
+}
+
+.spot dl {
+    overflow: hidden;
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 12px;
+}
+
+.spot dl dd,
+.spot dl dt {
+    float: left;
+}
+
+.spot dl dd {
+    clear: right;
+    width: 40%;
+}
+
+.spot dl dt {
+    width: 60%;
+    font-weight: bold;    
+}
+
+.spot.holidaySummary dl dt {
+    width: 30%;
+}
+
+.spot.holidaySummary dl dd {
+    width: 70%;
+}
+
+/* Bumps --------------------------------------------- */
+
+.widget {
+    min-height: 150px;
+}
+
+.widget.standard {}
+
+/* Themes ------------------------------------------- */
+
+.rounded {
+    -webkit-box-shadow:  1px 1px 2px 0px #888;
+    box-shadow:  1px 1px 2px 0px #888;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;    
+}
+
+.grey {
+    background: #ccc;
+    color: #333;
+}
+
+.yellow {
+    background: #FFFFA3;
+}
+
+.white {
+    background: #FFFFFF;
+}
+
+.red {
+    background: #C73318;
+    color: #fff;
+    text-shadow: 1px 1px 0px #333333;
+    filter: dropshadow(color=#333333, offx=1, offy=1);    
+}
+
+.highlight h2,
+.highlight h3,
+.highlight h4,
+.highlight h5,
+.highlight h6,
+.highlight .heading {
+    text-shadow: 1px 1px 0px #FFFFFF;
+    filter: dropshadow(color=#FFFFFF, offx=1, offy=1);   
+}
+
+.red strong,
+.red a:link,
+.red a:visited,
+.red a:active {
+    color: #fff;
+}
+
+.red a:hover,
+.red a:focus {
+    text-decoration: none;
+}
+
+.plainGallery{
+    margin-bottom: 40px;
+    background: none;
+}
+
+/* -- Libraries --------------------------------------- */
+/*                                                      */
+/*    Supporting CSS for JQuery libraries.              */
+/*                                                      */
+/* ---------------------------------------------------- */
+
+/* JQuery Slick */
+
+.dc-slick
+{
+    width: 260px; /* Required to limit width of slick content */
+    background: #ccc;
+    padding: 20px 20px 0 20px;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.dc-slick a
+{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.dc-slick .heading
+{
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.dc-slick .dc-slick-content {
+overflow: auto; /* Required for content that may exceed browser width/height */
+color: #fff;
+}
+/* Positioning of slick content */
+.dc-slick.top  {
+top: 0;
+}
+.dc-slick.right  {
+right: 0;
+}
+.dc-slick.bottom  {
+bottom: 0;
+}
+.dc-slick.left  {
+left: 0;
+}
+/* Positioning for tab and alignment */
+.dc-slick .tab {
+cursor: pointer;
+font-size: 12px;
+line-height: 12px;
+background: #ccc;
+color: #fff;
+font-weight: bold;
+padding: 23px 10px 10px 10px;
+}
+.dc-slick, .dc-slick .tab {
+border: 3px solid #ccc;
+}
+.dc-slick.right .tab, .dc-slick.left .tab {
+top: 0;
+}
+.dc-slick.top .tab {
+bottom: 3px; /* Set to same width as border */
+}
+.dc-slick.top, .dc-slick.top .tab {
+border-top: none;
+}
+.dc-slick.right .tab {
+left: 3px; /* Set to same width as border */
+margin-top: -3px;
+}
+.dc-slick.right, .dc-slick.right .tab {
+border-right: none;
+}
+.dc-slick.bottom .tab {
+top: 3px;
+}
+.dc-slick.bottom, .dc-slick.bottom .tab {
+border-bottom: none;
+}
+.dc-slick.left .tab {
+right: 3px; /* Set to same width as border */
+margin-top: -3px;
+}
+.dc-slick.left, .dc-slick.left .tab {
+border-left: none;
+}
+ 
+.dc-slick.align-right .tab {
+margin-right: -3px; /* Set to same width as border */
+}
+.dc-slick.align-left .tab {
+margin-left: -3px; /* Set to same width as border */
+}
+
+@media only screen and (max-width: 960px)
+{
+ /* Slides ------------------------------------------- */
+
+    .plainGallery {
+        margin-bottom: 0;
+    }
+
+    #slides .slides_container {
+        display: block;  
+        width: 100%;
+        height: auto;
+    }
+
+    .headerImage div,
+    #slides .slides_container div {
+	    width: 100%;
+	    height: 100%;
+    }
+
+    #slides .slides_container div img,
+    .headerImage div img {
+        width: 100%;
+        height: auto;
+    }
+
+    .headerImage .slideContent,
+    #slides .slides_container .slideContent {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .headerImage .slideContent .heading,
+    #slides .slides_container .slideContent .heading {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #slides .pagination {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 479px) {
+
+    /* Logo --------------------------------------------- */
+
+    /* .logo {
+        position: static;
+        margin-bottom: 20px;
+        margin-top: 35px;
+    } */
+
+    /* Section overview --------------------------------- */
+
+    /* #columnsWrapper .sectionItem img {
+        float: none;
+        width: 100%;
+        height: auto;
+        border: 0;
+        padding: 0;
+    } */
+
+    /* Navigation --------------------------------------- */
+
+    /* .navigation {
+        position: static;
+        display: block;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .navigation li,
+    .navigation li a {
+        display: block;
+        float: none;
+    }
+
+    .navigation li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation li a {
+        padding: 10px;    
+        background: #ccc;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navigation li a:hover {
+        padding: 16px;
+    }
+
+    .navigation li a.current {
+        background: #efefef;
+    }  */
+}

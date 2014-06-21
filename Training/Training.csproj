@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27C82C9B-F43C-4781-A0A6-F1049881E156}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Training</RootNamespace>
+    <AssemblyName>Training</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\Libraries\AntiXSSLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dms.Jump.TrafficGenerator.Business">
+      <HintPath>..\Libraries\Dms.Jump.TrafficGenerator.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.core">
+      <HintPath>..\Libraries\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\Libraries\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>..\Libraries\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq.Lucene">
+      <HintPath>..\Libraries\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.LuceneProvider">
+      <HintPath>..\Libraries\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\base.css" />
+    <Content Include="css\fonts\bebasneue-webfont.svg" />
+    <Content Include="css\lib\base.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="css\lib\global.css" />
+    <Content Include="css\skeleton.css" />
+    <Content Include="css\style.css" />
+    <Content Include="img\current.png" />
+    <Content Include="img\demo-2.jpg" />
+    <Content Include="img\demo-3.jpg" />
+    <Content Include="img\demo-5.jpg" />
+    <Content Include="img\demo.jpg" />
+    <Content Include="img\footer-bg.png" />
+    <Content Include="img\footer-bike-bg.png" />
+    <Content Include="img\lib\arrow-next.png" />
+    <Content Include="img\lib\arrow-prev.png" />
+    <Content Include="img\lib\background.png" />
+    <Content Include="img\lib\example-frame.png" />
+    <Content Include="img\lib\loading.gif" />
+    <Content Include="img\lib\new-ribbon.png" />
+    <Content Include="img\lib\page-background.jpg" />
+    <Content Include="img\lib\pagination.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\message.png" />
+    <Content Include="img\newspaper.png" />
+    <Content Include="img\page-background.jpg" />
+    <Content Include="img\print.png" />
+    <Content Include="img\printer.png" />
+    <Content Include="img\rotator-current.png" />
+    <Content Include="img\rotator.png" />
+    <Content Include="img\slide-1.jpg" />
+    <Content Include="img\slide-2.jpg" />
+    <Content Include="img\slide-3.jpg" />
+    <Content Include="img\slide-4.jpg" />
+    <Content Include="img\slide-5.jpg" />
+    <Content Include="img\slide-6.jpg" />
+    <Content Include="img\slide-7.jpg" />
+    <Content Include="img\slide-rotator.png" />
+    <Content Include="img\slide.jpg" />
+    <Content Include="img\textures\darkdenim.png" />
+    <Content Include="img\textures\light_toast.png" />
+    <Content Include="img\textures\light_toast_%402X.png" />
+    <Content Include="img\tractor.jpg" />
+    <Content Include="js\basecore-main.js" />
+    <Content Include="js\lib\jquery.min.js" />
+    <Content Include="js\lib\jquery.slick.2.1.js" />
+    <Content Include="js\lib\slides.min.jquery.js" />
+    <Content Include="layouts\BaseCore\content\basecore-news-listing.ascx" />
+    <Content Include="layouts\BaseCore\search\basecore-search-form.ascx" />
+    <Content Include="layouts\BaseCore\site\basecore-body.ascx" />
+    <Content Include="layouts\BaseCore\site\basecore-canvas.ascx" />
+    <Content Include="layouts\BaseCore\widgets\basecore-widget.ascx" />
+    <Content Include="layouts\BaseCore\widgets\basecore-widget-book.ascx" />
+    <Content Include="layouts\BaseCore\widgets\basecore-widget-holiday-summary.ascx" />
+    <Content Include="layouts\BaseCore\columns\basecore-columns-onecol.ascx" />
+    <Content Include="layouts\BaseCore\columns\basecore-columns-threecol.ascx" />
+    <Content Include="layouts\BaseCore\columns\basecore-columns-twocol.ascx" />
+    <Content Include="layouts\BaseCore\containers\basecore-container-gallery.ascx" />
+    <Content Include="layouts\BaseCore\containers\basecore-container-widgets.ascx" />
+    <Content Include="layouts\BaseCore\containers\basecore-container-header.ascx" />
+    <Content Include="layouts\BaseCore\containers\basecore-container-page.ascx" />
+    <Content Include="layouts\BaseCore\containers\basecore-container-footer.ascx" />
+    <Content Include="layouts\BaseCore\BaseCore.aspx" />
+    <Content Include="layouts\BaseCore\BaseCore-Print.aspx" />
+    <Content Include="layouts\BaseCore\content\basecore-book-holiday.ascx" />
+    <Content Include="layouts\BaseCore\print\basecore-print-holiday.ascx" />
+    <Content Include="layouts\BaseCore\search\basecore-search-results.ascx" />
+    <Content Include="layouts\BaseCore\site\basecore-head.ascx" />
+    <Content Include="layouts\BaseCore\site\basecore-toolbar.ascx" />
+    <Content Include="sitecore modules\shell\web forms for marketers\themes\BaseCore.css" />
+    <Content Include="xsl\BaseCore\basecore-section-overview.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xsl\BaseCore\basecore-navigation-main.xslt" />
+    <Content Include="xsl\BaseCore\basecore-navigation-footer.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xsl\BaseCore\basecore-itinerary.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xsl\BaseCore\basecore-breadcrumb.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xsl\BaseCore\basecore-glossary.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xsl\BaseCore\basecore-navigation.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="layouts\BaseCore\content\basecore-book-holiday.ascx.designer.cs">
+      <DependentUpon>basecore-book-holiday.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\content\basecore-news-listing.ascx.cs">
+      <DependentUpon>basecore-news-listing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\content\basecore-news-listing.ascx.designer.cs">
+      <DependentUpon>basecore-news-listing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\search\basecore-search-form.ascx.cs">
+      <DependentUpon>basecore-search-form.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\search\basecore-search-form.ascx.designer.cs">
+      <DependentUpon>basecore-search-form.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-body.ascx.cs">
+      <DependentUpon>basecore-body.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-body.ascx.designer.cs">
+      <DependentUpon>basecore-body.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-head.ascx.designer.cs">
+      <DependentUpon>basecore-head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-canvas.ascx.cs">
+      <DependentUpon>basecore-canvas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-canvas.ascx.designer.cs">
+      <DependentUpon>basecore-canvas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\widgets\basecore-widget.ascx.cs">
+      <DependentUpon>basecore-widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\widgets\basecore-widget.ascx.designer.cs">
+      <DependentUpon>basecore-widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\widgets\basecore-widget-book.ascx.cs">
+      <DependentUpon>basecore-widget-book.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\widgets\basecore-widget-book.ascx.designer.cs">
+      <DependentUpon>basecore-widget-book.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\widgets\basecore-widget-holiday-summary.ascx.cs">
+      <DependentUpon>basecore-widget-holiday-summary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\widgets\basecore-widget-holiday-summary.ascx.designer.cs">
+      <DependentUpon>basecore-widget-holiday-summary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\columns\basecore-columns-onecol.ascx.cs">
+      <DependentUpon>basecore-columns-onecol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\columns\basecore-columns-onecol.ascx.designer.cs">
+      <DependentUpon>basecore-columns-onecol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\columns\basecore-columns-threecol.ascx.cs">
+      <DependentUpon>basecore-columns-threecol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\columns\basecore-columns-threecol.ascx.designer.cs">
+      <DependentUpon>basecore-columns-threecol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\columns\basecore-columns-twocol.ascx.cs">
+      <DependentUpon>basecore-columns-twocol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\columns\basecore-columns-twocol.ascx.designer.cs">
+      <DependentUpon>basecore-columns-twocol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-gallery.ascx.cs">
+      <DependentUpon>basecore-container-gallery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-gallery.ascx.designer.cs">
+      <DependentUpon>basecore-container-gallery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-widgets.ascx.cs">
+      <DependentUpon>basecore-container-widgets.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-widgets.ascx.designer.cs">
+      <DependentUpon>basecore-container-widgets.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-header.ascx.cs">
+      <DependentUpon>basecore-container-header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-header.ascx.designer.cs">
+      <DependentUpon>basecore-container-header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-page.ascx.cs">
+      <DependentUpon>basecore-container-page.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-page.ascx.designer.cs">
+      <DependentUpon>basecore-container-page.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-footer.ascx.cs">
+      <DependentUpon>basecore-container-footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\containers\basecore-container-footer.ascx.designer.cs">
+      <DependentUpon>basecore-container-footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\content\basecore-book-holiday.ascx.cs">
+      <DependentUpon>basecore-book-holiday.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\print\basecore-print-holiday.ascx.cs">
+      <DependentUpon>basecore-print-holiday.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\print\basecore-print-holiday.ascx.designer.cs">
+      <DependentUpon>basecore-print-holiday.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\search\basecore-search-results.ascx.cs">
+      <DependentUpon>basecore-search-results.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\search\basecore-search-results.ascx.designer.cs">
+      <DependentUpon>basecore-search-results.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-head.ascx.cs">
+      <DependentUpon>basecore-head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-toolbar.ascx.cs">
+      <DependentUpon>basecore-toolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\BaseCore\site\basecore-toolbar.ascx.designer.cs">
+      <DependentUpon>basecore-toolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\responsive\" />
+    <Folder Include="xsl\BaseCore-FED\" />
+    <Folder Include="xsl\Labs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\BaseCore\BaseCore.CascadeDatasource.config" />
+    <Content Include="App_Config\Include\BaseCore\BaseCore.LayoutInheritance.config" />
+    <Content Include="App_Config\BaseCore.ApplicationConfig.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\BaseCore\BaseCore.Sites.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <Content Include="App_Config\Include\BaseCore\BaseCore.HtmlCacheClearer.config" />
+    <Content Include="css\fonts\BebasNeue.otf" />
+    <Content Include="css\fonts\bebasneue-webfont.eot" />
+    <Content Include="css\fonts\bebasneue-webfont.ttf" />
+    <Content Include="css\fonts\bebasneue-webfont.woff" />
+    <Content Include="App_Config\Include\BaseCore\BaseCore.Analytics.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Utilities\Generic.SitecoreUtilities.csproj">
+      <Project>{17dc255c-6afc-44e4-a755-96a4f2c39eba}</Project>
+      <Name>Generic.SitecoreUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Training.Advanced\Training.Advanced.csproj">
+      <Project>{a5a54e3c-16fd-4d8c-9e71-19610f01129d}</Project>
+      <Name>Training.Advanced</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Training.Controls\Training.Controls.csproj">
+      <Project>{4166CB35-2078-497D-B195-BA6BFC02FFC2}</Project>
+      <Name>Training.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Training.Utilities\Training.Utilities.csproj">
+      <Project>{3E329DD3-1D20-4C4A-A3B1-F3A73D404EB2}</Project>
+      <Name>Training.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Traincore.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Traincore Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Traincore WND Release Base|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Traincore WND Release Trainer|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Traincore WND Base|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Traincore WND Trainer|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58836</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SC_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\.\packages\SlowCheetah.2.5.5\tools\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
